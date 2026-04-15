@@ -258,7 +258,7 @@ export default function Home() {
             </a>
           </nav>
 
-          <a className="vantage-button-primary text-sm" href="#contact">
+          <a className="vantage-button-primary text-sm" href="#contact-details">
             Email Us About Your Business
           </a>
         </div>
@@ -287,7 +287,7 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col gap-4 sm:flex-row">
-                <a className="vantage-button-primary" href="#contact">
+                <a className="vantage-button-primary" href="#contact-details">
                   Email Us About Your Business
                   <ArrowRight className="size-4" />
                 </a>
@@ -492,8 +492,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="vantage-section pt-6">
-          <div id="contact" className="section-anchor container scroll-mt-32">
+        <section id="contact" className="section-anchor vantage-section pt-2">
+          <div className="container">
             <div className="vantage-panel overflow-hidden rounded-[2.25rem]">
               <div className="grid gap-0 xl:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)]">
                 <Reveal className="relative min-h-full overflow-hidden border-b border-white/8 p-4 xl:border-b-0 xl:border-r xl:p-5">
@@ -512,7 +512,7 @@ export default function Home() {
                   </div>
                 </Reveal>
 
-                <div className="space-y-10 p-7 sm:p-9 lg:p-12">
+                <div className="space-y-8 p-7 sm:p-9 lg:p-12">
                   <Reveal>
                     <SectionHeading
                       eyebrow="Contact"
@@ -521,35 +521,36 @@ export default function Home() {
                     />
                   </Reveal>
 
-                  <div className="grid gap-4 sm:grid-cols-2">
-                    {contactDetails.map((detail, index) => {
-                      const Icon = detail.icon;
+                  <div id="contact-details" className="space-y-6 scroll-mt-20">
+                    <div className="grid gap-4 sm:grid-cols-2">
+                      {contactDetails.map((detail, index) => {
+                        const Icon = detail.icon;
 
-                      return (
-                        <Reveal key={`${detail.label}-${detail.name}`} delay={index * 0.05}>
-                          <a
-                            href={detail.href}
-                            className="vantage-outline block rounded-[1.5rem] p-5 transition duration-300 hover:-translate-y-1 hover:border-[#5DCAA5]/28"
-                          >
-                            <div className="flex items-center gap-3 text-white/58">
-                              <Icon className="size-4 text-[#5DCAA5]" />
-                              <p className="text-sm uppercase tracking-[0.24em]">
-                                {detail.label}
+                        return (
+                          <Reveal key={`${detail.label}-${detail.name}`} delay={index * 0.05}>
+                            <a
+                              href={detail.href}
+                              className="vantage-outline block rounded-[1.5rem] p-5 transition duration-300 hover:-translate-y-1 hover:border-[#5DCAA5]/28"
+                            >
+                              <div className="flex items-center gap-3 text-white/58">
+                                <Icon className="size-4 text-[#5DCAA5]" />
+                                <p className="text-sm uppercase tracking-[0.24em]">
+                                  {detail.label}
+                                </p>
+                              </div>
+                              <p className="mt-4 text-sm font-semibold uppercase tracking-[0.2em] text-[#8ae2c5]">
+                                {detail.name}
                               </p>
-                            </div>
-                            <p className="mt-4 text-sm font-semibold uppercase tracking-[0.2em] text-[#8ae2c5]">
-                              {detail.name}
-                            </p>
-                            <p className="mt-2 text-lg font-semibold text-white">
-                              {detail.value}
-                            </p>
-                          </a>
-                        </Reveal>
-                      );
-                    })}
-                  </div>
+                              <p className="mt-2 text-lg font-semibold text-white">
+                                {detail.value}
+                              </p>
+                            </a>
+                          </Reveal>
+                        );
+                      })}
+                    </div>
 
-                  <Reveal delay={0.15}>
+                    <Reveal delay={0.15}>
                     <div className="vantage-outline rounded-[1.6rem] p-5 sm:p-6">
                       <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
                         <div>
@@ -573,6 +574,7 @@ export default function Home() {
                       </div>
                     </div>
                   </Reveal>
+                  </div>
 
                   <Reveal delay={0.24}>
                     <div className="flex flex-col gap-4 rounded-[1.7rem] border border-dashed border-[#5DCAA5]/24 bg-[#5DCAA5]/6 p-5 text-sm leading-7 text-white/68 sm:flex-row sm:items-center sm:justify-between">

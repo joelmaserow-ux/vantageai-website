@@ -25,3 +25,7 @@ The updated page now shows dedicated Instagram and Facebook icon buttons in both
 ## CTA, contact, and social update review
 
 The hero CTA now reads **Email Us About Your Business** and correctly lands on the contact section with the contact panel aligned in view. The contact section displays the real Jon Tyson and Joel Maserow email and phone details as clickable contact cards. The Instagram and Facebook buttons are no longer blank squares; they now render as visible brand-style logos inside dark premium icon buttons in both the contact section and footer.
+
+## Contact viewport anchor refinement
+
+After updating the CTA target to `#contact-details`, clicking **Email Us About Your Business** now lands lower in the contact section so the contact cards and social icons are clearly visible in the viewport at once. The names, email addresses, phone numbers, and Instagram and Facebook buttons are all on screen when the CTA is used.

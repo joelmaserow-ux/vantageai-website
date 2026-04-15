@@ -1,0 +1,3 @@
+- [ ] Adjust the hero CTA contact anchor so it lands with the full contact panel visible in the viewport.
+- [ ] Refine the contact section spacing or scroll target so names, emails, phone numbers, and social links are all on screen after clicking the CTA.
+- [ ] Verify the updated contact scroll behavior in the browser.
