@@ -17,3 +17,7 @@ At this stage, the main desktop composition appears coherent and visually polish
 ## Interaction check
 
 The header **Contact** link correctly scrolls to the contact section and updates the URL hash to `#contact`, confirming that the page navigation works as a smooth single-page experience.
+
+## Social icon refinement review
+
+The updated page now shows dedicated Instagram and Facebook icon buttons in both the contact section and the footer. The buttons are rendered as teal rounded-square controls against the dark background, and the contact anchor continues to land correctly on the lower section. The icons are visible as interactive elements in the browser and are positioned prominently enough to meet the requested treatment.

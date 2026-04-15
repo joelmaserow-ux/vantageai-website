@@ -1,14 +1,7 @@
 /**
  * Design note: This page follows the Vantage AI neo-noir corporate modernist direction with asymmetrical composition, dark premium surfaces, restrained teal signal accents, and concise, outcome-led business copy.
  */
-import {
-  ArrowRight,
-  ChevronRight,
-  Facebook,
-  Instagram,
-  Mail,
-  Phone,
-} from "lucide-react";
+import { ArrowRight, ChevronRight, Mail, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 
 const heroImage =
@@ -92,13 +85,13 @@ const contactDetails = [
 const socialLinks = [
   {
     label: "Instagram",
-    value: "[link placeholder]",
-    icon: Instagram,
+    href: "https://www.instagram.com/vantageai_stayahead?igsh=dWNrMG1iY2dzdnBu",
+    iconClass: "fa-brands fa-instagram",
   },
   {
     label: "Facebook",
-    value: "[link placeholder]",
-    icon: Facebook,
+    href: "https://www.facebook.com/share/14amYqfmNEZ/",
+    iconClass: "fa-brands fa-facebook-f",
   },
 ] as const;
 
@@ -146,6 +139,28 @@ function SectionHeading({
         </p>
       </div>
     </div>
+  );
+}
+
+function SocialIconButton({
+  href,
+  label,
+  iconClass,
+}: {
+  href: string;
+  label: string;
+  iconClass: string;
+}) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      aria-label={label}
+      className="group inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-[#5DCAA5]/20 bg-[#5DCAA5] text-[#08121a] shadow-[0_16px_36px_rgba(93,202,165,0.16)] transition duration-300 hover:-translate-y-1 hover:brightness-110 hover:shadow-[0_20px_44px_rgba(93,202,165,0.28)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5DCAA5]/70"
+    >
+      <i className={`${iconClass} text-xl transition duration-300 group-hover:scale-110`} aria-hidden="true" />
+    </a>
   );
 }
 
@@ -448,27 +463,30 @@ export default function Home() {
                     })}
                   </div>
 
-                  <div className="grid gap-4 sm:grid-cols-2">
-                    {socialLinks.map((social, index) => {
-                      const Icon = social.icon;
-
-                      return (
-                        <Reveal key={social.label} delay={0.15 + index * 0.05}>
-                          <div className="vantage-outline rounded-[1.5rem] p-5">
-                            <div className="flex items-center gap-3 text-white/58">
-                              <Icon className="size-4 text-[#5DCAA5]" />
-                              <p className="text-sm uppercase tracking-[0.24em]">
-                                {social.label}
-                              </p>
-                            </div>
-                            <p className="mt-4 text-lg font-semibold text-white">
-                              {social.value}
-                            </p>
-                          </div>
-                        </Reveal>
-                      );
-                    })}
-                  </div>
+                  <Reveal delay={0.15}>
+                    <div className="vantage-outline rounded-[1.6rem] p-5 sm:p-6">
+                      <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+                        <div>
+                          <p className="text-sm uppercase tracking-[0.24em] text-white/52">
+                            Follow Vantage AI
+                          </p>
+                          <p className="mt-2 text-base leading-7 text-white/70">
+                            Connect with us on Instagram and Facebook.
+                          </p>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          {socialLinks.map((social) => (
+                            <SocialIconButton
+                              key={social.label}
+                              href={social.href}
+                              label={social.label}
+                              iconClass={social.iconClass}
+                            />
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </Reveal>
 
                   <Reveal delay={0.24}>
                     <div className="flex flex-col gap-4 rounded-[1.7rem] border border-dashed border-[#5DCAA5]/24 bg-[#5DCAA5]/6 p-5 text-sm leading-7 text-white/68 sm:flex-row sm:items-center sm:justify-between">
@@ -497,13 +515,15 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-3 text-sm text-white/58">
-            <span className="rounded-full border border-white/10 px-4 py-2">
-              Instagram: [link placeholder]
-            </span>
-            <span className="rounded-full border border-white/10 px-4 py-2">
-              Facebook: [link placeholder]
-            </span>
+          <div className="flex items-center gap-3">
+            {socialLinks.map((social) => (
+              <SocialIconButton
+                key={social.label}
+                href={social.href}
+                label={social.label}
+                iconClass={social.iconClass}
+              />
+            ))}
           </div>
         </div>
       </footer>
