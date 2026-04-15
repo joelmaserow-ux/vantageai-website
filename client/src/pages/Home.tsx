@@ -103,14 +103,6 @@ const socialLinks = [
   },
 ] as const;
 
-const clientLogoSlots = [
-  "Client Logo",
-  "Client Logo",
-  "Client Logo",
-  "Client Logo",
-  "Client Logo",
-] as const;
-
 function LogoMark() {
   return (
     <div className="flex items-center gap-3">
@@ -253,7 +245,7 @@ export default function Home() {
             <a className="transition hover:text-white" href="#how-it-works">
               How It Works
             </a>
-            <a className="transition hover:text-white" href="#contact">
+            <a className="transition hover:text-white" href="#contact-details">
               Contact
             </a>
           </nav>
@@ -344,34 +336,6 @@ export default function Home() {
                     Intelligent systems for teams that want cleaner operations and less
                     manual lift.
                   </p>
-                </div>
-              </div>
-            </Reveal>
-          </div>
-        </section>
-
-        <section className="pb-4">
-          <div className="container">
-            <Reveal className="vantage-outline rounded-[1.9rem] px-6 py-6 sm:px-7">
-              <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-                <div className="max-w-xl">
-                  <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#8ae2c5]">
-                    Client proof
-                  </p>
-                  <p className="mt-3 text-base leading-7 text-white/62">
-                    A dedicated logo strip now sits beneath the hero and is ready for your
-                    real client marks once you send them through.
-                  </p>
-                </div>
-                <div className="grid w-full gap-3 sm:grid-cols-3 lg:max-w-3xl lg:grid-cols-5">
-                  {clientLogoSlots.map((logo, index) => (
-                    <div
-                      key={`${logo}-${index}`}
-                      className="flex min-h-[5.2rem] items-center justify-center rounded-[1.35rem] border border-white/10 bg-white/[0.03] px-4 text-center text-xs font-semibold uppercase tracking-[0.3em] text-white/34"
-                    >
-                      {logo}
-                    </div>
-                  ))}
                 </div>
               </div>
             </Reveal>
@@ -521,7 +485,7 @@ export default function Home() {
                     />
                   </Reveal>
 
-                  <div id="contact-details" className="space-y-6 scroll-mt-20">
+                  <div id="contact-details" className="space-y-6 scroll-mt-28">
                     <div className="grid gap-4 sm:grid-cols-2">
                       {contactDetails.map((detail, index) => {
                         const Icon = detail.icon;

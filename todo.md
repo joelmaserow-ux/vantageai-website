@@ -1,3 +1,6 @@
-- [ ] Adjust the hero CTA contact anchor so it lands with the full contact panel visible in the viewport.
-- [ ] Refine the contact section spacing or scroll target so names, emails, phone numbers, and social links are all on screen after clicking the CTA.
-- [ ] Verify the updated contact scroll behavior in the browser.
+- [x] Adjust the hero CTA contact anchor so it lands with the full contact panel visible in the viewport.
+- [x] Refine the contact section spacing or scroll target so names, emails, phone numbers, and social links are all on screen after clicking the CTA.
+- [x] Verify the updated contact scroll behavior in the browser.
+- [x] Remove the client proof section from the landing page.
+- [x] Adjust the top navigation anchor landing positions so each section sits slightly lower in the viewport when clicked.
+- [x] Verify the updated top navigation scrolling behavior in the browser.

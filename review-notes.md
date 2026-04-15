@@ -29,3 +29,8 @@ The hero CTA now reads **Email Us About Your Business** and correctly lands on t
 ## Contact viewport anchor refinement
 
 After updating the CTA target to `#contact-details`, clicking **Email Us About Your Business** now lands lower in the contact section so the contact cards and social icons are clearly visible in the viewport at once. The names, email addresses, phone numbers, and Instagram and Facebook buttons are all on screen when the CTA is used.
+
+## Navigation and client proof refinement
+
+The client proof strip beneath the hero has been removed, so the page now flows directly from the hero into the service section. Testing the top **What We Do** navigation link confirms the section now lands slightly lower in the viewport, leaving more breathing room beneath the sticky header and making the section heading easier to read immediately after the scroll.
+The top **Contact** navigation link now targets the contact-details anchor directly and lands with the contact cards, names, phone numbers, email addresses, and social buttons clearly visible together, reducing the chance that visitors stop above the information they need.
