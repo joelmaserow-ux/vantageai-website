@@ -21,3 +21,7 @@ The header **Contact** link correctly scrolls to the contact section and updates
 ## Social icon refinement review
 
 The updated page now shows dedicated Instagram and Facebook icon buttons in both the contact section and the footer. The buttons are rendered as teal rounded-square controls against the dark background, and the contact anchor continues to land correctly on the lower section. The icons are visible as interactive elements in the browser and are positioned prominently enough to meet the requested treatment.
+
+## CTA, contact, and social update review
+
+The hero CTA now reads **Email Us About Your Business** and correctly lands on the contact section with the contact panel aligned in view. The contact section displays the real Jon Tyson and Joel Maserow email and phone details as clickable contact cards. The Instagram and Facebook buttons are no longer blank squares; they now render as visible brand-style logos inside dark premium icon buttons in both the contact section and footer.
