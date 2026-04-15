@@ -1,9 +1,12 @@
+/* Design note: This stylesheet defines the Vantage AI neo-noir corporate modernist system with dark architectural surfaces, restrained teal signals, layered depth, and asymmetrical editorial rhythm. */
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --font-display: "Manrope", sans-serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -43,83 +46,136 @@
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+  --radius: 1.25rem;
+  --background: oklch(0.16 0.02 255);
+  --foreground: oklch(0.97 0.01 235);
+  --card: oklch(0.2 0.017 255);
+  --card-foreground: oklch(0.97 0.01 235);
+  --popover: oklch(0.18 0.018 255);
+  --popover-foreground: oklch(0.97 0.01 235);
+  --primary: oklch(0.8 0.11 170);
+  --primary-foreground: oklch(0.19 0.02 250);
+  --secondary: oklch(0.26 0.016 255);
+  --secondary-foreground: oklch(0.93 0.01 235);
+  --muted: oklch(0.23 0.015 255);
+  --muted-foreground: oklch(0.72 0.018 240);
+  --accent: oklch(0.24 0.025 200);
+  --accent-foreground: oklch(0.96 0.01 235);
+  --destructive: oklch(0.67 0.2 27);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.36 0.018 250 / 34%);
+  --input: oklch(0.36 0.018 250 / 24%);
+  --ring: oklch(0.8 0.11 170 / 72%);
+  --chart-1: oklch(0.8 0.11 170);
+  --chart-2: oklch(0.64 0.07 220);
+  --chart-3: oklch(0.72 0.04 260);
+  --chart-4: oklch(0.56 0.05 200);
+  --chart-5: oklch(0.69 0.07 150);
+  --sidebar: oklch(0.18 0.018 255);
+  --sidebar-foreground: oklch(0.97 0.01 235);
+  --sidebar-primary: oklch(0.8 0.11 170);
+  --sidebar-primary-foreground: oklch(0.19 0.02 250);
+  --sidebar-accent: oklch(0.22 0.018 255);
+  --sidebar-accent-foreground: oklch(0.97 0.01 235);
+  --sidebar-border: oklch(0.36 0.018 250 / 34%);
+  --sidebar-ring: oklch(0.8 0.11 170 / 72%);
 }
 
 .dark {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-500);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.85 0.005 65);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.85 0.005 65);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.85 0.005 65);
-  --secondary: oklch(0.24 0.006 286.033);
-  --secondary-foreground: oklch(0.7 0.005 65);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground:  oklch(0.92 0.005 65);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.488 0.243 264.376);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground:  oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.488 0.243 264.376);
+  --background: oklch(0.16 0.02 255);
+  --foreground: oklch(0.97 0.01 235);
+  --card: oklch(0.2 0.017 255);
+  --card-foreground: oklch(0.97 0.01 235);
+  --popover: oklch(0.18 0.018 255);
+  --popover-foreground: oklch(0.97 0.01 235);
+  --primary: oklch(0.8 0.11 170);
+  --primary-foreground: oklch(0.19 0.02 250);
+  --secondary: oklch(0.26 0.016 255);
+  --secondary-foreground: oklch(0.93 0.01 235);
+  --muted: oklch(0.23 0.015 255);
+  --muted-foreground: oklch(0.72 0.018 240);
+  --accent: oklch(0.24 0.025 200);
+  --accent-foreground: oklch(0.96 0.01 235);
+  --destructive: oklch(0.67 0.2 27);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.36 0.018 250 / 34%);
+  --input: oklch(0.36 0.018 250 / 24%);
+  --ring: oklch(0.8 0.11 170 / 72%);
+  --chart-1: oklch(0.8 0.11 170);
+  --chart-2: oklch(0.64 0.07 220);
+  --chart-3: oklch(0.72 0.04 260);
+  --chart-4: oklch(0.56 0.05 200);
+  --chart-5: oklch(0.69 0.07 150);
+  --sidebar: oklch(0.18 0.018 255);
+  --sidebar-foreground: oklch(0.97 0.01 235);
+  --sidebar-primary: oklch(0.8 0.11 170);
+  --sidebar-primary-foreground: oklch(0.19 0.02 250);
+  --sidebar-accent: oklch(0.22 0.018 255);
+  --sidebar-accent-foreground: oklch(0.97 0.01 235);
+  --sidebar-border: oklch(0.36 0.018 250 / 34%);
+  --sidebar-ring: oklch(0.8 0.11 170 / 72%);
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
-  body {
-    @apply bg-background text-foreground;
+
+  html {
+    scroll-behavior: smooth;
   }
+
+  body {
+    min-height: 100vh;
+    font-family: var(--font-body);
+    background:
+      radial-gradient(circle at top left, rgba(93, 202, 165, 0.18), transparent 26%),
+      radial-gradient(circle at 80% 20%, rgba(61, 92, 128, 0.22), transparent 24%),
+      linear-gradient(180deg, #06111c 0%, #0b1621 38%, #07111a 100%);
+    color: var(--foreground);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 72px 72px;
+    mask-image: radial-gradient(circle at center, black 35%, transparent 78%);
+    opacity: 0.32;
+  }
+
+  ::selection {
+    background: rgba(93, 202, 165, 0.3);
+    color: #f5fbff;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.03em;
+  }
+
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
   [type="button"]:not(:disabled),
@@ -134,24 +190,11 @@
 }
 
 @layer components {
-  /**
-   * Custom container utility that centers content and adds responsive padding.
-   *
-   * This overrides Tailwind's default container behavior to:
-   * - Auto-center content (mx-auto)
-   * - Add responsive horizontal padding
-   * - Set max-width for large screens
-   *
-   * Usage: <div className="container">...</div>
-   *
-   * For custom widths, use max-w-* utilities directly:
-   * <div className="max-w-6xl mx-auto px-4">...</div>
-   */
   .container {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem; /* 16px - mobile padding */
+    padding-left: 1rem;
     padding-right: 1rem;
   }
 
@@ -160,18 +203,155 @@
     min-width: 0;
   }
 
+  .vantage-shell {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .vantage-shell::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(6, 17, 28, 0.08) 0%, rgba(6, 17, 28, 0.42) 100%);
+    z-index: -1;
+  }
+
+  .vantage-section {
+    position: relative;
+    padding-block: clamp(4.5rem, 8vw, 7.5rem);
+  }
+
+  .vantage-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(217, 246, 235, 0.74);
+  }
+
+  .vantage-kicker::before {
+    content: "";
+    width: 2.75rem;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(93, 202, 165, 0.16), rgba(93, 202, 165, 0.92));
+  }
+
+  .vantage-panel {
+    border: 1px solid rgba(130, 166, 191, 0.14);
+    background:
+      linear-gradient(180deg, rgba(17, 30, 43, 0.88) 0%, rgba(10, 21, 31, 0.9) 100%);
+    box-shadow:
+      0 28px 80px rgba(1, 7, 12, 0.42),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(18px);
+  }
+
+  .vantage-outline {
+    border: 1px solid rgba(93, 202, 165, 0.16);
+    background: rgba(10, 22, 32, 0.46);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  }
+
+  .vantage-grid-logo {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.28rem;
+  }
+
+  .vantage-grid-logo span {
+    width: 0.66rem;
+    height: 0.66rem;
+    border-radius: 0.3rem;
+    background: linear-gradient(180deg, rgba(132, 239, 205, 1) 0%, rgba(93, 202, 165, 1) 100%);
+    box-shadow: 0 0 22px rgba(93, 202, 165, 0.3);
+  }
+
+  .vantage-button-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    border-radius: 999px;
+    background: linear-gradient(180deg, #7ee2bf 0%, #5dcaa5 100%);
+    color: #08121a;
+    padding: 0.95rem 1.4rem;
+    font-weight: 700;
+    transition:
+      transform 240ms ease,
+      box-shadow 240ms ease,
+      background 240ms ease;
+    box-shadow: 0 16px 40px rgba(93, 202, 165, 0.18);
+  }
+
+  .vantage-button-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 48px rgba(93, 202, 165, 0.24);
+  }
+
+  .vantage-button-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    border-radius: 999px;
+    border: 1px solid rgba(138, 166, 188, 0.2);
+    background: rgba(9, 20, 30, 0.48);
+    color: rgba(244, 249, 252, 0.92);
+    padding: 0.95rem 1.4rem;
+    font-weight: 600;
+    transition:
+      transform 240ms ease,
+      border-color 240ms ease,
+      background 240ms ease;
+  }
+
+  .vantage-button-secondary:hover {
+    transform: translateY(-2px);
+    border-color: rgba(93, 202, 165, 0.28);
+    background: rgba(12, 25, 37, 0.74);
+  }
+
+  .vantage-stat-line {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .vantage-stat-line::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 1px;
+    background: linear-gradient(180deg, rgba(93, 202, 165, 0), rgba(93, 202, 165, 0.82), rgba(93, 202, 165, 0));
+  }
+
+  .section-anchor {
+    scroll-margin-top: 6rem;
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
   @media (min-width: 640px) {
     .container {
-      padding-left: 1.5rem; /* 24px - tablet padding */
+      padding-left: 1.5rem;
       padding-right: 1.5rem;
     }
   }
 
   @media (min-width: 1024px) {
     .container {
-      padding-left: 2rem; /* 32px - desktop padding */
+      padding-left: 2rem;
       padding-right: 2rem;
-      max-width: 1280px; /* Standard content width */
+      max-width: 1280px;
     }
   }
 }
