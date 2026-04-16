@@ -63,15 +63,15 @@ const contactDetails = [
   {
     label: "Email",
     name: "Jon Tyson",
-    value: "jon@dominion.build",
-    href: "mailto:jon@dominion.build",
+    value: "jon@vantageaiadvisory.com",
+    href: "mailto:jon@vantageaiadvisory.com",
     icon: Mail,
   },
   {
     label: "Email",
     name: "Joel Maserow",
-    value: "joel.maserow@gmail.com",
-    href: "mailto:joel.maserow@gmail.com",
+    value: "joel@vantageaiadvisory.com",
+    href: "mailto:joel@vantageaiadvisory.com",
     icon: Mail,
   },
   {
